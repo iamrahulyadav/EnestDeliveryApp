@@ -12,3 +12,11 @@
 /captures
 .externalNativeBuild
 .cxx
+/app/build
+/app/*.jks
+/app/*.old
+/app/*json
+/app/Appinfo.txt
+/app/*pepk
+/app/"SHA signing keys.txt"
+/app/*.pem
