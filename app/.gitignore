@@ -2,7 +2,7 @@
 *.jks
 *.old
 *json
-"Appinfo.txt"
+Appinfo.txt
 *pepk
-"SHA signing keys.txt"
+SHA signing keys.txt
 *.pem
