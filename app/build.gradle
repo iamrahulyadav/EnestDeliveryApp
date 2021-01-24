@@ -1,0 +1,90 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.12.10'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    signingConfigs {
+        EnestDeliveryPartner {
+            storeFile file('C:\\Users\\Subhankar Pal\\Desktop\\Enest Internship\\Firebase Project\\Delivery Boy App v1.5.1\\app\\DeliveryBoy.jks')
+            storePassword 'cscode@123'
+            keyAlias 'key0'
+            keyPassword 'cscode@123'
+        }
+    }
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.enest.deliverypartner"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 2
+        versionName "2.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                // onesignal_app_id               : '40c166f8-5d7c-4c75-ae46-d98520a830aa',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_app_id               : 'e389483a-d79a-4dde-b76b-356af4900aea',
+                onesignal_google_project_number: 'REMOTE'
+        ]
+        signingConfig signingConfigs.EnestDeliveryPartner
+        multiDexEnabled true
+        proguardFiles
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            renderscriptOptimLevel 3
+            multiDexEnabled true
+        }
+    }
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.google.com' }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '30.0.2'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    implementation 'com.github.wangjiegulu:rfab:2.0.0' //floting Button
+    implementation 'com.github.gcacace:signature-pad:1.3.1' //singnature
+    implementation 'com.github.bumptech.glide:glide:4.11.0' //image loder
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.1'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.onesignal:OneSignal:4.1.0'
+    implementation 'com.kofigyan.stateprogressbar:stateprogressbar:1.0.0'
+}

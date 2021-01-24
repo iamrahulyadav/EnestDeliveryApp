@@ -1,0 +1,8 @@
+/build
+*.jks
+*.old
+*json
+"Appinfo.txt"
+*pepk
+"SHA signing keys.txt"
+*.pem
