@@ -29649,8 +29649,8 @@ com.enest.deliverypartner.fregment.ProfileFragment:
     private void lambda$onClick$1(android.content.DialogInterface,int)
     private synthetic void lambda$onCreateView$0(android.widget.CompoundButton,boolean)
     public void onClick()
-    public synthetic void lambda$onCreateView$0$ProfileFragment(android.widget.CompoundButton,boolean)
     public void lambda$onClick$1$ProfileFragment(android.content.DialogInterface,int)
+    public synthetic void lambda$onCreateView$0$ProfileFragment(android.widget.CompoundButton,boolean)
     public final void orderStatus()
     public android.widget.ImageView imgLogout
     public android.widget.ImageView imgEdit

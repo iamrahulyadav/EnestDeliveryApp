@@ -13,7 +13,7 @@
         android:layout_marginTop="5dp"
         android:fontFamily="@font/coresans_cr_medium"
         android:padding="5dp"
-        android:text="Deliverd Order"
+        android:text="Delivered Order"
         android:textColor="@color/colorBalck"
         android:textSize="21sp"
         android:textStyle="bold" />

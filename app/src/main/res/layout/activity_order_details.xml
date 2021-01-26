@@ -312,7 +312,7 @@
                     android:layout_gravity="center"
                     android:background="@drawable/button_round"
                     android:gravity="center"
-                    android:text="Deliverd"
+                    android:text="Delivered"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
             </LinearLayout>

@@ -81,7 +81,7 @@ public class OrderDeliverDetailsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Order Delivered Details");
+        getSupportActionBar().setTitle("Order Delivery Details");
         getSupportActionBar().setElevation(0f);
         sessionManager = new SessionManager(this);
         user = sessionManager.getUserDetails();
